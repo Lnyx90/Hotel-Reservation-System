@@ -5,6 +5,6 @@ hai willy ganteng
 
 
 hai willy ganteng
-hai akbar jelek
+hai akbar ganteng banget
 hai ce
 
