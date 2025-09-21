@@ -32,6 +32,12 @@ const server = http.createServer((req, res) => {
                     <td>${booking.roomType}</td>
                     <td>${booking.checkInDate}</td>
                     <td>${booking.checkOutDate}</td>
+					<td>
+						<form method="POST" action="/delete" style="display:inline">
+							<input type="hidden" name="id" value="${booking.id}">
+							<button type="submit">Hapus</button>
+						</form>
+					</td>
                 </tr>
                 `
 					)
@@ -45,6 +51,7 @@ const server = http.createServer((req, res) => {
                     <td>Room Type</td>
                     <td>Check In Date</td>
                     <td>Check Out Date</td>
+					<td>Action</td>
                 </tr>
                         ${bookingList}
                     </table>
@@ -62,7 +69,15 @@ const server = http.createServer((req, res) => {
 		req.on('end', () => {
 			const formData = querystring.parse(body);
 			const data = loadData();
+
+			let newId = 1;
+			if (data.length > 0) {
+				const maxId = Math.max(...data.map(item => item.id));
+				newId = maxId + 1;
+			}
+
 			data.push({
+				id: newId,
 				roomType: formData.roomType,
 				checkInDate: formData.checkInDate,
 				checkOutDate: formData.checkOutDate,
@@ -73,6 +88,20 @@ const server = http.createServer((req, res) => {
 			res.writeHead(302, { Location: '/' });
 			res.end();
 		});
+	} else if (req.method === 'POST' && req.url === '/delete') {
+		let body = '';
+		req.on('data', (chunk) => {
+			body += chunk.toString();
+		});
+		req.on('end', () => {
+			let deleteData = querystring.parse(body);
+			let data = loadData();
+			data = data.filter((bookings) => bookings.id != deleteData.id);
+			saveData(data);
+
+			res.writeHead(302, { Location: '/' });
+			res.end();
+		})
 	}
 });
 

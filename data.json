@@ -1,17 +1,1 @@
-[
-  {
-    "roomType": "single",
-    "checkInDate": "2025-09-19",
-    "checkOutDate": "2025-09-20"
-  },
-  {
-    "roomType": "suite",
-    "checkInDate": "2025-09-26",
-    "checkOutDate": "2025-09-27"
-  },
-  {
-    "roomType": "single",
-    "checkInDate": "2025-09-30",
-    "checkOutDate": "2025-09-30"
-  }
-]
+[]
