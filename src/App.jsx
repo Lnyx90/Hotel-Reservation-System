@@ -11,6 +11,7 @@ function App() {
 
       <nav className={`sidebar ${menuOpen ? "active" : ""}`}>
         <h2>Xanthe Hotel</h2>
+        
         <ul>
           <li><a href="#rooms">Check Our Rooms</a></li>
           <li><a href="#dine">Dine With Us</a></li>
@@ -24,7 +25,7 @@ function App() {
       {/* Video Section */}
       <section className="video-section">
         <video autoPlay muted loop>
-          <source src="video.mp4" type="video/mp4" />
+          <source src="public/video/Resort.mp4" type="video/mp4" />
           Your browser does not support HTML5 video.
         </video>
         <div className="video-overlay"></div>
