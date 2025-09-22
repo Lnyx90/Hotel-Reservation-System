@@ -119,6 +119,9 @@ body, html {
   text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
   text-align: center;
   animation: fadeIn 2s ease;
+
+  background: url("public/lobby/lobby2.jpg") no-repeat center center/cover;
+  border-radius: 12px;
 }
 
 footer {
