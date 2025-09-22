@@ -4,7 +4,9 @@
   "description": "ppp\r hai willy ganteng",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/Lnyx90/Hotel-Reservation-System/issues"
   },
-  "homepage": "https://github.com/Lnyx90/Hotel-Reservation-System#readme"
+  "homepage": "https://github.com/Lnyx90/Hotel-Reservation-System#readme",
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "swiper": "^12.0.2"
+  },
+  "devDependencies": {
+    "vite": "^7.1.7"
+  }
 }

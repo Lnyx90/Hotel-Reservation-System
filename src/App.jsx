@@ -10,15 +10,13 @@ function App() {
       </button>
 
       <nav className={`sidebar ${menuOpen ? "active" : ""}`}>
-        <h2>Xanthe Hotel</h2>
+        <h2>Nyx Hotel</h2>
         
         <ul>
           <li><a href="#rooms">Check Our Rooms</a></li>
           <li><a href="#dine">Dine With Us</a></li>
-          <li><a href="#meeting">Meeting</a></li>
-          <li><a href="#wedding">Wedding</a></li>
           <li><a href="#facilities">Our Facilities</a></li>
-          <li><a href="#offers">Hotel Promotions</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -29,10 +27,76 @@ function App() {
           Your browser does not support HTML5 video.
         </video>
         <div className="video-overlay"></div>
-        <div className="hotel-name">Xanthe Hotel</div>
+        <div className="title-content">
+          <h2>Nyx Hotel</h2>
+          <button className="book-btn">Book a Room</button>
+        </div>
       </section>
 
       {/* Features Section */}
+      <section id="rooms" className="bg-gradient-to-b from-white to-[#fbf9f7] py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="font-['Playfair_Display'] text-[26px]">Rooms & Suites</h2>
+          <p className="text-gray-500">
+            A range of accommodations from intimate suites to private penthouses. Each room carefully
+            designed for comfort and alpine views.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+            <div className="bg-white rounded-xl shadow-md overflow-hidden border border-black/5">
+              <div
+                className="h-40 bg-cover bg-center"
+                style={{
+                  backgroundImage:
+                    "url('https://images.unsplash.com/photo-1505691723518-36a0ad6e9f5b?auto=format&fit=crop&w=1200&q=60')",
+                }}
+              ></div>
+              <div className="p-4">
+                <h3 className="font-['Playfair_Display'] text-lg mb-2">Deluxe Room</h3>
+                <p className="text-sm text-gray-500 mb-2">King bed • 40m²</p>
+                <p className="text-gray-500 m-0">
+                  Warm materials, elegant furnishings and sweeping view of the slopes.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-md overflow-hidden border border-black/5">
+              <div
+                className="h-40 bg-cover bg-center"
+                style={{
+                  backgroundImage:
+                    "url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=60')",
+                }}
+              ></div>
+              <div className="p-4">
+                <h3 className="font-['Playfair_Display'] text-lg mb-2">Suite</h3>
+                <p className="text-sm text-gray-500 mb-2">King bed • Living area</p>
+                <p className="text-gray-500 m-0">
+                  Separate living room, refined details and private balcony.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-md overflow-hidden border border-black/5">
+              <div
+                className="h-40 bg-cover bg-center"
+                style={{
+                  backgroundImage:
+                    "url('https://images.unsplash.com/photo-1551882547-ff40c63f4f2f?auto=format&fit=crop&w=1200&q=60')",
+                }}
+              ></div>
+              <div className="p-4">
+                <h3 className="font-['Playfair_Display'] text-lg mb-2">Penthouse</h3>
+                <p className="text-sm text-gray-500 mb-2">Two bedrooms • Terrace</p>
+                <p className="text-gray-500 m-0">
+                  Expansive terrace, private services and panoramic vistas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="features">
         <div className="feature-card" id="rooms">
           <img src="rooms.jpg" alt="Rooms" />
@@ -71,10 +135,11 @@ function App() {
       </section>
 
       <footer>
-        <div className="footer-top">
-          <img src="assets/facebook.png" alt="Facebook" />
-          <img src="assets/instagram.png" alt="Instagram" />
-          <img src="assets/twitter.png" alt="Twitter" />
+        <div className="social-icons">
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+
         </div>
 
         <div className="footer-links">
